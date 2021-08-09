@@ -100,7 +100,7 @@ export default {
     load() {
       this.changeWindowSize();
       let loadingInstance = ElLoading.service({fullscreen: true});
-      request.get("/json/test.json").then((res) => {
+      request.get("/api").then((res) => {
         if (this.searchKey !== '') {
           const array = [] = res.list;
           const rArray = [];

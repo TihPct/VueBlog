@@ -4,15 +4,15 @@ module.exports = {
     lintOnSave: false,
     productionSourceMap: false,
     devServer: {
-        // proxy: {  //配置跨域
-        //     '/api': {
-        //         target: 'http://localhost:8080',
-        //         changOrigin: true,  //允许跨域
-        //         pathRewrite: {
-        //             '/api': ''
-        //         }
-        //     },
-        // },
+        proxy: {  //配置跨域
+            '/api': {
+                target: 'https://afett-dev.coding.net/p/for_server/d/Lockexe/git/raw/master/Data_Json?download=false',
+                changOrigin: true,  //允许跨域
+                pathRewrite: {
+                    '/api': ''
+                }
+            },
+        },
         // public:'172.20.3.3:8080',
         port: 9090
     },
